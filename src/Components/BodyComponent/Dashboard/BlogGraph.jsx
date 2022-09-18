@@ -1,6 +1,7 @@
 import {
   Card,
   CardContent,
+  CardMedia,
   Divider,
   Grid,
   Paper,
@@ -71,12 +72,12 @@ export default function BlogGraph() {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [fetched]);
   return (
-    <Grid container className={classes.section} spacing={1}>
-      <Grid item xs={12} sm={7} md={7}>
+    <><Grid container className={classes.section} spacing={1}>
+      <Grid item xs={10} sm={10} md={10} >
         <Card component={Paper}>
           <CardContent>
-            <Typography variant='h6' className={classes.cardTitle} align='left'>
-              User Overviews
+            <Typography variant='h6' className={classes.cardTitle} align='left' >
+              Over view
             </Typography>
           </CardContent>
           <Divider />
@@ -88,11 +89,12 @@ export default function BlogGraph() {
         </Card>
       </Grid>
       {/* usedByDevices */}
-      <Grid item xs={12} sm={5} md={5}>
+      <Grid item xs={10} sm={2} md={3}>
         <Card component={Paper}>
+          
           <CardContent>
             <Typography variant='h6' className={classes.cardTitle} align='left'>
-              Used by graph
+              User activity
             </Typography>
           </CardContent>
           <Divider />
@@ -103,6 +105,76 @@ export default function BlogGraph() {
           </CardContent>
         </Card>
       </Grid>
+
+      <Grid item xs={10} sm={2} md={4}>
+        <Card component={Paper}>
+        <CardMedia
+        component="img"
+        height="200"
+        image="flower.png"
+        alt="green iguana"
+      />
+          <Divider />
+
+          <CardContent>
+            <Typography variant='h6' className={classes.cardTitle} align='left'>
+              other status
+            </Typography>
+          </CardContent>
+          <Divider />
+          <CardContent>          
+          <Typography variant='h6' className={classes.cardTitle} align='left'>
+              completed
+            </Typography>
+          </CardContent>
+          <CardContent>     
+          <Typography variant='h6' className={classes.cardTitle} align='left'>
+              pending
+            </Typography>
+          </CardContent>
+          {/* <CardContent>
+            <canvas
+              id='deviceOverViewGraph'
+              className={classes.generalGraph}></canvas>
+          </CardContent> */}
+        </Card>
+      </Grid>
+    <Grid item xs={10} sm={2} md={3}>
+        <Card component={Paper}>
+        <CardMedia
+        component="img"
+        height="239"
+        image="graph.png"
+        alt="green iguana"
+      />
+       
+          <CardContent>
+            <Typography variant='h6' className={classes.cardTitle} align='left'>
+              Top product
+            </Typography>
+          </CardContent>
+          <CardContent>
+            <Typography variant='h6' className={classes.cardTitle} align='left'>
+          #1 polo blue T-shirt <br></br>
+          #2 Red cap T-shirt
+
+            </Typography>
+          </CardContent>
+
+          <Divider />
+
+          {/* <CardContent>
+
+            <canvas
+              id='userOverViewGraph'
+              className={classes.generalGraph}></canvas>
+          </CardContent> */}
+        </Card>
+      </Grid>
     </Grid>
+
+      </>
+
+   
   );
 }

@@ -39,11 +39,11 @@ export default function Section3() {
 
   return (
     <Grid container className={classes.section} spacing={1}>
-      <Grid item xs={12} sm={5} md={5}>
+      {/* <Grid item xs={12} sm={5} md={5}>
         <Card component={Paper}>
           <CardContent>
             <Typography variant='h6' className={classes.cardTitle} align='left'>
-              Top Author
+              Hello world!
             </Typography>
           </CardContent>
           <Divider />
@@ -69,9 +69,9 @@ export default function Section3() {
             )}
           </List>
         </Card>
-      </Grid>
+      </Grid> */}
       {/* usedByDevices */}
-      <Grid item xs={12} sm={7} md={7}>
+      {/* <Grid item xs={12} sm={7} md={7}>
         <Card component={Paper}>
           <CardContent>
             <Typography variant='h6' className={classes.cardTitle} align='left'>
@@ -101,7 +101,7 @@ export default function Section3() {
             )}
           </List>
         </Card>
-      </Grid>
+      </Grid> */}
     </Grid>
   );
 }

@@ -22,7 +22,7 @@ export default function NavbarComponent({ handleDrawerToggle }) {
       <Toolbar className={classes.toolbar}>
         <Box style={{ display: "flex" }}>
           <Typography variant='h6' className={classes.logo}>
-            {"<AdminPannel />"}
+            {"Menu"}
           </Typography>
         </Box>
         <Hidden smDown>

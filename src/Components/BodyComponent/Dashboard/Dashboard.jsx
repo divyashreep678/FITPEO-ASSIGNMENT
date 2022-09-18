@@ -1,9 +1,12 @@
 import React, { useEffect, useState } from "react";
 import {
+  Avatar,
   Box,
   Button,
   Card,
+  CardActions,
   CardContent,
+  CardMedia,
   Grid,
   Typography,
 } from "@material-ui/core";
@@ -40,12 +43,12 @@ export default function Dashboard() {
       icon: <ArrowDropDownIcon />,
       iconLabel: "4.1%",
     },
-    {
-      label: "Total Visitor",
-      value: "37450",
-      icon: <ArrowDropDownIcon />,
-      iconLabel: "2.5%",
-    },
+    // {
+    //   label: "Total Visitor",
+    //   value: "37450",
+    //   icon: <ArrowDropDownIcon />,
+    //   iconLabel: "2.5%",
+    // },
   ];
 
   const GraphData = [
@@ -67,12 +70,12 @@ export default function Dashboard() {
       bgColor: green[50],
       brColor: green["A400"],
     },
-    {
-      label: "Total Visitor",
-      data: fakeArrayGenrator({ length: 10, digit: 100 }),
-      bgColor: teal[50],
-      brColor: teal["A400"],
-    },
+    // {
+    //   label: "Total Visitor",
+    //   data: fakeArrayGenrator({ length: 10, digit: 100 }),
+    //   bgColor: teal[50],
+    //   brColor: teal["A400"],
+    // },
   ];
 
   //updating the graph
@@ -94,11 +97,13 @@ export default function Dashboard() {
   return (
     <Box mt={2}>
       {/* //title section  */}
-      <PageHeader label='Dashboard' title='Blog Overview' />
+      <PageHeader label='Dashboard'  />
 
+<Grid container spacing={2} >
+<Grid item xs={10}>
       <Grid container spacing={1} className={classes.section}>
         {DisplayData.map((item, i) => (
-          <Grid key={i} item xs={6} sm={3} md={3}>
+          <Grid key={i} item xs={6} sm={1} md={4}>
             <Card>
               <CardContent className={classes.displayCard}>
                 <canvas
@@ -128,6 +133,7 @@ export default function Dashboard() {
                       {item.iconLabel}
                     </Button>
                   </Box>
+
                 </Box>
               </CardContent>
             </Card>
@@ -135,9 +141,46 @@ export default function Dashboard() {
         ))}
       </Grid>
 
+      
+      </Grid>
+      
       {/* section blog graph  */}
       <BlogGraph />
       <Section3 />
+      {/* </Grid> */}
+
+      <Grid item xs={2}>
+     <Card sx={{ maxWidth: 300 }}>
+      <CardMedia
+        component="img"
+        height="150"
+        image="girl.png"
+        alt="green iguana"
+      />
+      <CardContent>
+      {/* <Avatar alt="Remy Sharp" src="/static/images/avatar/1.jpg" /> */}
+
+        <Typography>Lorem ipsum dolor sit amet consectetur adipisicing elit. hhuujmknbjj rerum nam perspiciatis </Typography>
+        {/* <Typography gutterBottom variant="h5" component="div">
+        Lizards are a widespread group of squamate reptiles, with over 6,000
+          species, ranging across all continents except Antarctica
+        </Typography> */}
+        <Typography variant="body2" color="text.secondary">
+          Lizards are a widespread group of squamate reptiles, with over 6,000
+          species, ranging across all continents except Antarctica
+          
+
+        </Typography>
+      </CardContent>
+      {/* <CardActions>
+        <Button size="small">Share</Button>
+        <Button size="small">Learn More</Button>
+      </CardActions> */}
+    </Card>
+    {/* <Typography></Typography> */}
+  </Grid>
+
+  </Grid>
     </Box>
   );
 }
