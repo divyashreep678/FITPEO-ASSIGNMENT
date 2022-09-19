@@ -1,22 +1,19 @@
 import React, { useEffect, useState } from "react";
 import {
-  Avatar,
   Box,
   Button,
   Card,
-  CardActions,
   CardContent,
   CardMedia,
   Grid,
   Typography,
 } from "@material-ui/core";
-import { blue, green, lightBlue, red, teal } from "@material-ui/core/colors";
+import { blue, green, lightBlue, red } from "@material-ui/core/colors";
 import ArrowDropDownIcon from "@material-ui/icons/ArrowDropDown";
 import ArrowDropUpIcon from "@material-ui/icons/ArrowDropUp";
 import { useStyles } from "../BodyStyles";
 import GraphComponent from "../../../Common/GraphComponent";
 import BlogGraph from "./BlogGraph";
-import Section3 from "./Section3";
 import { fakeArrayGenrator } from "../../../Common/fakeDataGenetator";
 import { PageHeader } from "../../../Common/Components";
 
@@ -43,12 +40,7 @@ export default function Dashboard() {
       icon: <ArrowDropDownIcon />,
       iconLabel: "4.1%",
     },
-    // {
-    //   label: "Total Visitor",
-    //   value: "37450",
-    //   icon: <ArrowDropDownIcon />,
-    //   iconLabel: "2.5%",
-    // },
+   
   ];
 
   const GraphData = [
@@ -70,12 +62,7 @@ export default function Dashboard() {
       bgColor: green[50],
       brColor: green["A400"],
     },
-    // {
-    //   label: "Total Visitor",
-    //   data: fakeArrayGenrator({ length: 10, digit: 100 }),
-    //   bgColor: teal[50],
-    //   brColor: teal["A400"],
-    // },
+   
   ];
 
   //updating the graph
@@ -138,16 +125,13 @@ export default function Dashboard() {
               </CardContent>
             </Card>
           </Grid>
-        ))}
+        ))}       
       </Grid>
-
+      <BlogGraph />
       
       </Grid>
       
       {/* section blog graph  */}
-      <BlogGraph />
-      <Section3 />
-      {/* </Grid> */}
 
       <Grid item xs={2}>
      <Card sx={{ maxWidth: 300 }}>
@@ -158,18 +142,15 @@ export default function Dashboard() {
         alt="green iguana"
       />
       <CardContent>
-      {/* <Avatar alt="Remy Sharp" src="/static/images/avatar/1.jpg" /> */}
-
-        <Typography>Lorem ipsum dolor sit amet consectetur adipisicing elit. hhuujmknbjj rerum nam perspiciatis </Typography>
-        {/* <Typography gutterBottom variant="h5" component="div">
-        Lizards are a widespread group of squamate reptiles, with over 6,000
-          species, ranging across all continents except Antarctica
-        </Typography> */}
+        <Typography>Lorem ipsum dolor sit amet consectetur adipisicing elit. hhuujmknbjj rerum nam perspiciatis </Typography>       
         <Typography variant="body2" color="text.secondary">
           Lizards are a widespread group of squamate reptiles, with over 6,000
-          species, ranging across all continents except Antarctica
-          
-
+          species, ranging across all continents except Antarctica   
+          Lizards are a widespread group of squamate reptiles, with over 6,000
+          species, ranging across all continents except Antarctica   Lizards are a widespread group of squamate reptiles, with over 6,000
+          species, ranging across all continents except Antarctica   Lizards are a widespread group of squamate reptiles, with over 6,000
+          species, ranging across all continents except Antarctica   Lizards are a widespread group of squamate reptiles,   
+          species.widespread spread 
 
         </Typography>
       </CardContent>

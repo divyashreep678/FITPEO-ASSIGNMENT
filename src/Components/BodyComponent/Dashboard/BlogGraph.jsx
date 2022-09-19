@@ -73,7 +73,7 @@ export default function BlogGraph() {
   }, [fetched]);
   return (
     <><Grid container className={classes.section} spacing={1}>
-      <Grid item xs={10} sm={10} md={10} >
+      <Grid item xs={10} sm={10} md={12 } >
         <Card component={Paper}>
           <CardContent>
             <Typography variant='h6' className={classes.cardTitle} align='left' >
@@ -89,7 +89,7 @@ export default function BlogGraph() {
         </Card>
       </Grid>
       {/* usedByDevices */}
-      <Grid item xs={10} sm={2} md={3}>
+      <Grid item xs={10} sm={2} md={5 }>
         <Card component={Paper}>
           
           <CardContent>
